@@ -35,7 +35,7 @@ public class HmacHttpServer {
     }
 
     static class HmacHandler implements HttpHandler {
-        private static final String SECRET_KEY = "SuperSecretKey123";
+        private static final String SECRET_KEY = "Key";
 
         @Override
         public void handle(HttpExchange exchange) throws IOException {
@@ -46,7 +46,7 @@ public class HmacHttpServer {
 
                 System.out.println("Received payload: " + body);
 
-                // Extract message and HMAC from JSON manually (for simplicity)
+                // Extract message and HMAC from JSON
                 String message = body.split("\"message\":\"")[1].split("\"")[0];
                 String receivedHmac = body.split("\"hmac\":\"")[1].split("\"")[0];
 

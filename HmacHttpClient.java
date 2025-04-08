@@ -25,8 +25,8 @@ import java.util.Base64;
 
 public class HmacHttpClient {
     public static void main(String[] args) {
-        String message = "Hello from Java HTTP Server";
-        String secretKey = "SuperSecretKey123";
+        String message = "Hello";
+        String secretKey = "Key";
 
         try {
             String hmac = generateHMAC(message, secretKey);
